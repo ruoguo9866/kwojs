@@ -1,5 +1,5 @@
 {
-  "name": "k-uri",
+  "name": "@ruoguo/k-uri",
   "version": "1.0.0",
   "description": "URI/URL 工具：查询参数解析、拼接、setUrl、getPathFromState 等",
   "type": "module",
