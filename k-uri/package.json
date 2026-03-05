@@ -1,0 +1,15 @@
+{
+  "name": "k-uri",
+  "version": "1.0.0",
+  "description": "URI/URL 工具：查询参数解析、拼接、setUrl、getPathFromState 等",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  },
+  "license": "ISC"
+}

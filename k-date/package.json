@@ -1,0 +1,38 @@
+{
+  "name": "@ruoguo/k-date",
+  "version": "1.0.0",
+  "description": "日期与时钟方法库：格式化、计算、范围、时间戳、相对时间、倒计时（开始/暂停/停止/重置）",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./k-date": "./k-date.js",
+    "./k-clock": "./k-clock.js"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "files": [
+    "index.js",
+    "k-date.js",
+    "k-clock.js",
+    "README.md",
+    "k-date.md",
+    "k-clock.md"
+  ],
+  "keywords": [
+    "date",
+    "time",
+    "format",
+    "countdown",
+    "timer",
+    "calendar",
+    "timestamp",
+    "relative-time"
+  ],
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

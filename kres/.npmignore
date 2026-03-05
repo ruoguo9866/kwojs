@@ -1,0 +1,23 @@
+# 示例和开发文件不发布
+example.html
+main.js
+vitest.setup.js
+vitest.config.js
+index.test.js
+# 版本控制
+.git
+.gitignore
+
+# 依赖与构建
+node_modules
+*.log
+.DS_Store
+.env
+.env.*
+
+# 编辑器与系统
+.idea
+.vscode
+*.swp
+*.swo
+Thumbs.db

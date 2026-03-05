@@ -1,0 +1,32 @@
+{
+  "name": "@ruoguo/kres",
+  "version": "1.0.0",
+  "description": "一个类似 axios 的 HTTP 请求库",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "echo 'Ready to publish.'"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "http",
+    "request",
+    "axios",
+    "ajax",
+    "fetch",
+    "xhr"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
