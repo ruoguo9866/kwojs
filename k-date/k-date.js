@@ -428,23 +428,32 @@ function relativeTime(date, baseDate, labels = {}) {
 
   if (absMs < 1000) return isPast ? L.justNow : L.later;
 
-  const seconds = Math.floor(absMs / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-  const weeks = Math.floor(days / 7);
-  const months = Math.floor(days / 30);
-  const years = Math.floor(days / 365);
+  const totalSeconds = absMs / 1000;
+  const totalMinutes = absMs / 60000;
+  const totalHours = absMs / 3600000;
+  const totalDays = absMs / 86400000;
+  const totalWeeks = absMs / 604800000;
+  const totalMonths = absMs / (30 * 86400000);
+  const totalYears = absMs / (365 * 86400000);
+
+  const seconds = Math.floor(totalSeconds);
+  const minutes = Math.floor(totalMinutes);
+  const hours = Math.floor(totalHours);
+  const days = Math.floor(totalDays);
+  const weeks = Math.floor(totalWeeks);
+  const months = Math.floor(totalMonths);
+  const years = Math.floor(totalYears);
 
   const suffix = isPast ? L.past : L.future;
 
-  if (years > 0) return years + L.year + suffix;
-  if (months > 0) return months + L.month + suffix;
-  if (weeks > 0) return weeks + L.week + suffix;
-  if (days > 0) return days + L.day + suffix;
-  if (hours > 0) return hours + L.hour + suffix;
-  if (minutes > 0) return minutes + L.minute + suffix;
-  return seconds + L.second + suffix;
+  // 单位用 floor 判断，显示数值用 round，避免边界附近在“两天/三天”等之间来回跳
+  if (years > 0) return Math.round(totalYears) + L.year + suffix;
+  if (months > 0) return Math.round(totalMonths) + L.month + suffix;
+  if (weeks > 0) return Math.round(totalWeeks) + L.week + suffix;
+  if (days > 0) return Math.round(totalDays) + L.day + suffix;
+  if (hours > 0) return Math.round(totalHours) + L.hour + suffix;
+  if (minutes > 0) return Math.round(totalMinutes) + L.minute + suffix;
+  return Math.round(totalSeconds) + L.second + suffix;
 }
 
 /**
