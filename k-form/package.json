@@ -1,0 +1,51 @@
+{
+  "name": "@ruoguo/k-form",
+  "version": "1.0.0",
+  "description": "基于 antd-mobile Form 的可配置表单：表单项可从接口获取配置，自动生成表单",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./schema": "./schema.js",
+    "./demo": "./demo.jsx"
+  },
+  "scripts": {
+    "test": "vitest run --environment jsdom",
+    "test:watch": "vitest",
+    "demo": "cd demo && vite --open"
+  },
+  "files": [
+    "index.js",
+    "ConfigForm.js",
+    "schema.js",
+    "demo.jsx",
+    "README.md"
+  ],
+  "keywords": [
+    "form",
+    "antd-mobile",
+    "config",
+    "schema",
+    "dynamic-form"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
+    "antd-mobile": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "antd-mobile": "^5.34.0",
+    "jsdom": "^24.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^5.0.0",
+    "vitest": "^2.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}
